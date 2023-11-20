@@ -2,6 +2,7 @@ $(document).ready(function () {
   $(".fade_banners").slick({
     dots: false,
     infinite: true,
+    arrows: false,
     speed: 500,
     fade: true,
     cssEase: "linear",
@@ -70,6 +71,7 @@ $(document).ready(function () {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
@@ -83,4 +85,22 @@ $(document).ready(function () {
       $(".featured_group").removeClass("hover_active");
     }
   );
+
+  $(".before .card-body svg").hover(
+    function () {
+      // $(".after .card-body").addClass("card_active");
+      $(this)
+        .parentsUntil(".cat_box")
+        .closest(".card")
+        .find(".after .card-body")
+        .addClass("card_active");
+    }
+    // function () {
+    //   $(".after .card-body").removeClass("card_active");
+    // }
+  );
+
+  $(".activity .cat_box").mouseleave(function () {
+    $(".after .card-body").removeClass("card_active");
+  });
 });
