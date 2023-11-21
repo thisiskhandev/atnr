@@ -582,7 +582,7 @@ ul.variations button {
   height: 10px;
   border-radius: 100px;
   background-color: #000;
-  webkit-appearance: none;
+  --webkit-appearance: none;
   outline: none;
   border: 0;
 }
@@ -703,6 +703,101 @@ ul.variations :nth-child(3) button {
   bottom: 0 !important;
 }
 
+.blogs .card-body {
+  font-family: var(--font-secondary);
+  padding: 15px 10px;
+}
+
+.blogs .card-body p {
+  font-family: var(--font-secondary-light);
+  letter-spacing: 0;
+  font-size: 13px;
+  color: #282828;
+  -webkit-text-stroke: 0.5px;
+  margin: 0;
+}
+
+.blogs h6.card-text {
+  font-family: var(--font-secondary-light);
+  font-size: 12px;
+  color: #666;
+}
+
+.blogs h5.card-title {
+  font-size: 17px;
+  -webkit-text-stroke: 0.3px;
+  line-height: 1.3em;
+}
+
+.blogs .card {
+  border: 0;
+  outline: 0;
+  border-radius: 19px;
+}
+
+.blog_shot {
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+.blogs .card img {
+  transition: var(--transition);
+}
+
+.blogs .card:hover img {
+  transform: scale(1.1);
+  transition: var(--transition);
+}
+
+.blogs .card {
+  transition: var(--transition);
+}
+
+.blogs .card:hover .card-body {
+  transition: var(--transition);
+}
+
+.blogs .card:hover {
+  transition: var(--transition);
+  box-shadow: 0 0 20px 0 #0000001f;
+}
+
+.ship_wrap {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.ship_wrap * {
+  margin: 0;
+}
+
+.ship_row {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.ship_wrap:nth-child(1) img {
+  width: 60px;
+}
+
+.ship_wrap img {
+  width: 50px;
+}
+
+.ship_wrap h4 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ship_wrap p {
+  font-size: 10px;
+}
+
 /* ---------------- Media Quries ---------------- */
 
 @media only screen and (min-width: 768px) {
@@ -762,7 +857,8 @@ ul.variations :nth-child(3) button {
 }
 
 @media only screen and (max-width: 992px) {
-  .banner_cover {
+  .banner_cover,
+  br.break {
     display: none;
   }
   .banner {
@@ -821,6 +917,12 @@ ul.variations :nth-child(3) button {
     font-family: var(--font-secondary);
     color: #fff;
   }
+  .ship_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 500px;
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -858,11 +960,20 @@ ul.variations :nth-child(3) button {
   .social_list ul {
     justify-content: center;
   }
+  .banner .container {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 575px) {
   .banner h1 {
-    font-size: 35px;
+    font-size: 30px;
+  }
+  .ship_row {
+    grid-template-columns: 1fr;
+    max-width: 205px;
+    row-gap: 10px;
   }
 }
 

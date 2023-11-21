@@ -12,6 +12,5 @@
 <ul>
  <li>Mega Menu</li>
  <li>Mobile Reponsive Menu</li>
- <li>Blog section</li>
  <li>Image optimization</li>
 </ul>
