@@ -6,11 +6,3 @@
 
 <div>
 <a href="https://thisiskhandev.github.io/atnr/" target="_blank">Live Preview</a></div>
-
-##### Notes (Pending):
-
-<ul>
- <li>Mega Menu</li>
- <li>Mobile Reponsive Menu</li>
- <li>Image optimization</li>
-</ul>

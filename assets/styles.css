@@ -151,6 +151,10 @@ header .col-12:nth-child(2) {
   margin-top: 5px;
 }
 
+.icon_list img {
+  width: 17px;
+}
+
 .categories .card {
   text-align: center;
   position: relative;
@@ -798,11 +802,139 @@ ul.variations :nth-child(3) button {
   font-size: 10px;
 }
 
+a.nav-link.shopping:after {
+  content: attr(data-store-items);
+  position: absolute;
+  font-size: 10px;
+  background-color: var(--color-primary);
+  width: 15px;
+  text-align: center;
+  border-radius: 100px;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+header.header .navbar-nav a.nav-link {
+  font-size: 14px;
+}
+
+header.header .card {
+  border-radius: 20px;
+  max-width: 385px;
+  height: 215px;
+  padding: 0 10px;
+  padding-top: 10px;
+}
+
+header.header .card img {
+  height: 70px;
+  object-fit: contain;
+  width: 80%;
+}
+
+header.header .card .card-title {
+  font-size: 16px;
+  -webkit-text-stroke: 0.4px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+header.header .card .text-muted {
+  margin: 0;
+  margin-top: 10px;
+  font-family: var(--font-secondary);
+  font-size: 10px;
+}
+
+header.header .card .cta .btn {
+  margin-top: 20px;
+  font-size: 12px;
+  background-color: #fff;
+  width: 90px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+header.header .card .cta .btn:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+header.header .card .card-body {
+  padding: 0;
+}
+
+header.header .d-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 5px;
+}
+
+header.header .card .card-body .cta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+}
+
+#nervFaster {
+  display: flex;
+  justify-content: center;
+  height: 70%;
+  align-items: center;
+  position: absolute;
+}
+
+.mega_cards {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header.header .card .col-4 {
+  padding: 0;
+}
+
+.bg_overlay::before {
+  content: "";
+  background-color: #0000007b;
+  height: 10000vh;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 1000px;
+  animation: slideTop 0.5s linear 0s forwards;
+}
+
+@keyframes slideTop {
+  0% {
+    top: 1000px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+section.mega_cards.product_mega_active {
+  display: flex !important;
+}
+
 /* ---------------- Media Quries ---------------- */
 
 @media only screen and (min-width: 768px) {
   .featured_group.hover_active > section {
     grid-template-columns: 0.8fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  main.content {
+    margin-top: -58px;
   }
 }
 
@@ -812,9 +944,14 @@ ul.variations :nth-child(3) button {
   }
 }
 
+/* ----------------- Min Width Ends */
+
 @media only screen and (max-width: 1300px) {
   .banner .container {
     height: 560px;
+  }
+  header.header .navbar-nav a.nav-link {
+    font-size: 13px;
   }
 }
 
@@ -836,6 +973,9 @@ ul.variations :nth-child(3) button {
 }
 
 @media only screen and (max-width: 1140px) {
+  header.header > section.container {
+    max-width: 100%;
+  }
   .banner .container {
     height: 400px;
   }
@@ -847,9 +987,6 @@ ul.variations :nth-child(3) button {
 @media only screen and (max-width: 1024px) {
   .banner h1 {
     font-size: 56px;
-  }
-  .header .col-12 {
-    display: none;
   }
   .categories {
     margin-top: 30px;
@@ -864,7 +1001,7 @@ ul.variations :nth-child(3) button {
   .banner {
     --radius: 17px;
     --space: 90px;
-    background-image: url("./images/hero-shots\ \(1\).png");
+    background-image: url("./images/hero-shots\ \(1\).webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -875,19 +1012,19 @@ ul.variations :nth-child(3) button {
     padding-bottom: calc(var(--space) - 50px);
   }
   .banner.banner_2 {
-    background-image: url("./images/hero-shots\ \(2\).png");
+    background-image: url("./images/hero-shots\ \(2\).webp");
   }
   .banner.banner_3 {
-    background-image: url("./images/hero-shots\ \(3\).png");
+    background-image: url("./images/hero-shots\ \(3\).webp");
   }
   .banner.banner_4 {
-    background-image: url("./images/hero-shots\ \(4\).png");
+    background-image: url("./images/hero-shots\ \(4\).webp");
   }
   .banner.banner_5 {
-    background-image: url("./images/hero-shots\ \(5\).png");
+    background-image: url("./images/hero-shots\ \(5\).webp");
   }
   .banner.banner_6 {
-    background-image: url("./images/hero-shots\ \(6\).png");
+    background-image: url("./images/hero-shots\ \(6\).webp");
   }
   .banner h1 {
     font-size: 40px;
@@ -908,7 +1045,7 @@ ul.variations :nth-child(3) button {
     font-size: 35px;
   }
   main.deal_cover {
-    background-image: url("./images/deal-cover.png");
+    background-image: url("./images/deal-cover.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -923,9 +1060,27 @@ ul.variations :nth-child(3) button {
     max-width: 500px;
     margin: auto;
   }
+  header.header .card {
+    margin: auto;
+  }
+  header.header .d-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  header.header .card:nth-child(even) {
+    margin-left: 0;
+  }
+  header.header .card:nth-child(odd) {
+    margin-right: 0;
+  }
+  header.header .card {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  header.header .col-12 {
+    display: none;
+  }
   h2 {
     font-size: 30px;
   }
